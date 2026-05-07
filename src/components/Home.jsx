@@ -21,7 +21,7 @@ const Home = () => {
  const handleGetRitu = () => {
     navigator.geolocation.getCurrentPosition((pos) => {
       axios
-        .post("http://localhost:8080/api/weather", {
+        .post(`${process.env.REACT_APP_API_BASE_URL}/api/weather`, {
           lat: pos.coords.latitude,
           lon: pos.coords.longitude,
         })

@@ -44,7 +44,7 @@ const VegMealPage = () => {
 
         console.log(email, prakriti, days);
         const response = await axios.post(
-          "http://localhost:8080/api/generate-meal",
+          `${process.env.REACT_APP_API_BASE_URL}/api/generate-meal`,
           {
             email: email,
             prakriti: prakriti,

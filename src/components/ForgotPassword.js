@@ -28,7 +28,7 @@ export default function ForgotPassword() {
     }
 
     try {
-      await axios.post("http://localhost:8080/info/forgetPass", { email });
+      await axios.post(`${process.env.REACT_APP_API_BASE_URL}/info/forgetPass`, { email });
 
       localStorage.setItem("email", email);
       alert("OTP sent to your email");
@@ -49,7 +49,7 @@ export default function ForgotPassword() {
 
     try {
       const response = await axios.post(
-        "http://localhost:8080/info/VerifyOtp",
+        `${process.env.REACT_APP_API_BASE_URL}/info/VerifyOtp`,
         {
           email: localStorage.getItem("email"),
           otp,
@@ -96,7 +96,7 @@ export default function ForgotPassword() {
 
     console.log("Email:", localStorage.getItem("email"));
     console.log("Password:", newPassword);
-    await axios.post("http://localhost:8080/info/resetPassword", {
+    await axios.post(`${process.env.REACT_APP_API_BASE_URL}/info/resetPassword`, {
       email: localStorage.getItem("email"),
       password: newPassword,
     });

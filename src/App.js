@@ -87,7 +87,7 @@ function App() {
   const handleLogin = async (email, password, navigate, from) => {
     try {
       const response = await axios.post(
-        "http://localhost:8080/info/validateUser",
+        `${process.env.REACT_APP_API_BASE_URL}/info/validateUser`,
         { email, password }
       );
 

@@ -55,7 +55,7 @@ export default function Signup() {
       });
 
      const response = await axios.post(
-  "http://localhost:8080/info/addUser",
+  `${process.env.REACT_APP_API_BASE_URL}/info/addUser`,
   {
     username: name,
     email: email,

@@ -9,7 +9,7 @@ export default function Quiz() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8080/quiz/getQuestions")
+      .get(`${process.env.REACT_APP_API_BASE_URL}/quiz/getQuestions`)
       .then((res) => {
         setQuestions(res.data);
       })

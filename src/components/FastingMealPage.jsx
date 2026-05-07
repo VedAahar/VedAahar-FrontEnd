@@ -52,7 +52,7 @@ const FastingMealPage = () => {
     const lon = position.coords.longitude;
 
       const response = await axios.post(
-        "http://localhost:8080/api/generate-fasting-meal",
+        `${process.env.REACT_APP_API_BASE_URL}/api/generate-fasting-meal`,
         {
           email: username,
           prakriti: prakriti,
