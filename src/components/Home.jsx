@@ -60,7 +60,7 @@ const Home = () => {
 
       {/* ================= HERO ================= */}
       <section id="home" className="home-container">
-        <h1 className="vedahar-title">🌿 VedaAhar</h1>
+        <h1 className="vedahar-title">🌿 VedAahar</h1>
 
         <div className="hero-line"></div>
 
