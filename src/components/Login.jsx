@@ -54,7 +54,7 @@ export default function Login({ onLogin }) {
         >
           <div className="text-center mb-4">
             <h2 style={{ color: "#ff7f50", fontWeight: "700" }}>
-              🌿 VedaAhar
+              🌿 VedAahar
             </h2>
             <p style={{ fontSize: "0.9rem", color: "#555" }}>
               Personalized Ayurvedic Meal Planner
